@@ -28,7 +28,9 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="index.html">GrOW YOUR BABY</a>
+          <a class="navbar-brand" href="index.html"
+            ><strong>MiniMilestones</strong></a
+          >
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -42,22 +44,38 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-disabled="true">Toddler</a>
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="./fullcalendar-master/fullcalendar.html"
+                  aria-disabled="true"
+                  >Calender</a
+                >
+              </li>
             </ul>
-            <form class="d-flex" role="search">
+
+            <div id="signup-div">
+              <!-- <form class="d-flex" role="search">s -->
               <!-- <label
                 class="form-control me-2"
                 type="label"
                 aria-label="sign up
 "
               ></label> -->
+              <!-- </form> -->
 
-              <button class="btn btn-outline-success" type="submit">
-                <div id="signup_text"><h6>Sign Up</h6></div>
-                <div id="signup_img">
+              <button
+                class="btn btn-outline-success"
+                id="registerButton"
+                type="submit"
+              >
+                <div id="signup_text">
                   <img src="images/signUp.svg" alt="signup" />
+                  Sign Up
                 </div>
+                <div id="signup_img"></div>
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </nav>
@@ -65,26 +83,21 @@
 
     <div class="bg-warning-subtle text-warning-emphasis">
       <div class="main">
-        <a href="register.html"> register</a>
-        <a href="fullcalendar-master/fullcalendar.html">check calender</a>
+        <!-- <a href="register.html"> register</a> -->
+        <!-- <a href="fullcalendar-master/fullcalendar.html">check calender</a> -->
         <!-- <img src="backgrpundset.png" alt="back" /> -->
+        <div>
+          <img id="background_IMG" src="8.jpg" alt="mother" />
+        </div>
 
-        <img id="background_IMG" src="8.jpg" alt="mother" />
-        <div id="register_part">
-          <h1>Track Every Milestone</h1>
-          <h2>Register your baby for Enhanced Care!</h2>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-success" type="submit">Register</button>
-          </form>
+        <div class="main-body">
+          <div>
+            <h1 class="text-center1">Track Every Milestone</h1>
+            <h2 class="text-center2">Register your baby for Enhanced Care!</h2>
+          </div>
         </div>
       </div>
     </div>
-    <script src="register.js/"></script>
+    <!-- <script src="register.js/"></script> -->
   </body>
 </html>
