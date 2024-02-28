@@ -15,8 +15,6 @@
     <style>
       /* Custom CSS for the form border */
       .container {
-        margin-top: 3%;
-        border: 2px solid green; /* Border color */
         padding: 20px; /* Add padding inside the border */
         border-radius: 10px; /* Optional: Rounded corners */
       }
@@ -67,65 +65,75 @@
         </div>
       </nav>
     </div>
-    <div class="main"></div>
 
-    <div class="bg-warning-subtle text-warning-emphasis m-0 p-0">
-      <div class="container bg-warning mt-0">
-        <h2 class="border-2 border-success mt-2 p-2 text-center">
-          Welcome to MiniMilestones
-        </h2>
+    <div
+      class="bg-warning-subtle text-warning-emphasis m-0 p-0"
+      style="height: 100vh; width: 100%"
+    >
+      <div class="container bg-warning-subtle">
+        <div
+          class="register-form"
+          style="
+            border: 2px solid green;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+          "
+        >
+          <h2 class="border-2 border-success mt-2 p-2 text-center">
+            Welcome to MiniMilestones
+          </h2>
 
-        <h4 class="p-2 text-center">
-          Get personalized updates, expert tips, helpful advice, and more
-        </h4>
+          <h4 class="p-2 text-center">
+            Get personalized updates, expert tips, helpful advice, and more
+          </h4>
 
-        <form class="w-auto border-dark">
-          <div class="mb-3">
-            <label for="InputName" class="form-label">Name</label>
-            <input
-              type="text"
-              placeholder="Name"
-              class="form-control"
-              id="InputName"
-              autocomplete="Name"
-              required
-            />
-          </div>
-          <!-- <div class="mb-3">
-            <label for="inputAge" class="form-label">Child Age</label>
-            <input type="number" class="form-control" id="inputAge" />
-          </div> -->
-
-          <div class="mb-3">
-            <label for="InputEmail" class="form-label">Email address</label>
-            <input
-              type="email"
-              placeholder="email"
-              class="form-control"
-              id="InputEmail"
-              autocomplete="username"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="InputPassword" class="form-label">Password</label>
-            <input
-              placeholder="password"
-              type="password"
-              class="form-control"
-              id="InputPassword"
-              autocomplete="current-password"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            id="registerButton"
-            onClick="redirectToLogin()"
-            class="btn btn-success"
-          >
-            Submit
-          </button>
-        </form>
+          <form id="form" class="w-auto border-dark">
+            <div class="mb-3">
+              <label for="InputName" class="form-label">Name</label>
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-control"
+                id="InputName"
+                autocomplete="Name"
+                pattern="[A-Za-z]{1,20}"
+                title="Name must contain only letters and be 1 to 20 characters long"
+                required
+              />
+            </div>
+            <!-- <div class="mb-3">
+        <label for="inputAge" class="form-label">Child Age</label>
+        <input type="number" class="form-control" id="inputAge" />
+    </div> -->
+            <div class="mb-3">
+              <label for="InputEmail" class="form-label">Email address</label>
+              <input
+                type="email"
+                placeholder="email"
+                class="form-control"
+                id="InputEmail"
+                autocomplete="username"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="InputPassword" class="form-label">Password</label>
+              <input
+                placeholder="password"
+                type="password"
+                class="form-control"
+                id="InputPassword"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <div>
+              <button type="submit" id="registerButton" class="btn btn-success">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
