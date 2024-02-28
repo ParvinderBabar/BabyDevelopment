@@ -18,11 +18,11 @@
 
 .main-body {
   /* width: 90%; */
+  height: 100vh;
   display: flex;
   flex-direction: column;
 
   /* background-color: pink; */
-  text-align: center;
 }
 .text-center {
   flex-direction: column;
