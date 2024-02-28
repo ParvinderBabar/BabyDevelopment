@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../OneDrive/Homework/Flexbox_And_Responsive_CODE/Flexbox_And_Responsive"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "BabyDevelopment"
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
