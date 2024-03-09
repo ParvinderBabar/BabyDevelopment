@@ -40,12 +40,37 @@ p {
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.stopwatch-circle {
     background-color:#F9EBE0;
     border: 3px dashed #CC7178;
-    padding: 20px 0;
-    padding-bottom: 50px;
-    border-radius: 10px;
-    
+    padding: 50px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#timer-display {
+
 
 }
 
+#timer-button {
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    color:#CC7178;
+}
+
+#timer-button:hover {
+    color:#fba7ae;
+}

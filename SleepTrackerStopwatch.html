@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sleep Tracker Stopwatch</title>
-    <link rel="stylesheet" href="SleepTrackerStopwatch.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="SleepTrackerStopwatch.css" />
+  </head>
+  <body>
     <nav>
-        <ul class="nobulletpoints">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+      <ul class="nobulletpoints">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
     <header>
-        <h1>Sleep Tracker Stopwatch</h1>
+      <h1>Sleep Tracker Stopwatch</h1>
     </header>
 
-    <p>You can track your baby's sleep schedule with the stopwatch below. Simply click "start" to begin tracking.</p>
+    <p>
+      You can track your baby's sleep schedule with the stopwatch below. Simply
+      click "start" to begin tracking.
+    </p>
 
     <div class="container">
-        <div class="time-display">
-            00 : 00 : 00 : 00
-        </div>
-        <div class="buttons">
-            <button id="start-timer">Start</button>
-            <button id="pause-timer">Pause</button>
-            <button id="reset-timer">Reset</button>
-        </div>
+      <div class="stopwatch-circle">
+        <span id="timer-display">00 : 00 : 00</span>
+        <button id="timer-button" onclick="toggleTimer()">▶</button>
+      </div>
     </div>
 
-
-<script src="SleepTrackerStopwatch.js"></script>
-</body>
+    <script src="SleepTrackerStopwatch.js"></script>
+  </body>
 </html>
