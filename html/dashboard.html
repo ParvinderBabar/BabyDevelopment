@@ -12,6 +12,28 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      #all-trackers {
+        display: flex;
+        flex-direction: column;
+        /* gap: 40px; */
+      }
+
+      .card {
+        display: flex;
+        width: auto;
+        height: 150px;
+        background-color: pink;
+      }
+      .icons {
+        display: flex;
+
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+      }
+    </style>
   </head>
   <div class="p-8 bg-warning text-dark">
     <nav class="navbar navbar-expand-lg">
@@ -67,14 +89,35 @@
           Get personalized updates, expert tips, helpful advice, and more
         </h4> -->
       <!-- </div> -->
-      <div>
-        <a href="../html/feedingTracker.html">Sleep Track</a>
+      <div id="all-trackers">
+        <a href="../html/feedingTracker.html">
+          <div class="card">
+            <img class="icons" src="../images/sleeping.png" alt="sleep" />
+          </div>
+        </a>
         <hr />
 
-        <a href="/html/feedingTracker.html">Feeding Tracker</a>
+        <a href="/html/feedingTracker.html">
+          <div class="card">
+            <img class="icons" src="../images/bottle.png" alt="feeding" />
+          </div>
+        </a>
         <hr />
 
-        <a href="/html/feedingTracker.html">Diaper change Tracker</a>
+        <a href="/html/feedingTracker.html">
+          <div class="card">
+            <img class="icons" src="../images/diaper.png" alt="sleep" />
+          </div>
+        </a>
+        <hr />
+        <a href="/html/feedingTracker.html">
+          <div class="card">
+            <img class="icons" src="../images/growth.png" alt="sleep" />
+          </div>
+        </a>
+        <hr />
+
+        <a href="/html/feedingTracker.html"> Tracker</a>
         <hr />
 
         <!-- <a href="feeding.html>">Solid Food</a> -->

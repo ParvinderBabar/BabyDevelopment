@@ -13,6 +13,56 @@
       crossorigin="anonymous"
     />
   </head>
+  <style>
+    #startLeft {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only once */
+    }
+    #startRight {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only
+once */
+    }
+    #stop {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only once */
+    }
+    #left-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    #timerLeft {
+      color: darkgreen;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #timerRight {
+      color: darkgreen;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #main-container {
+      width: fit-content;
+      height: fit-content;
+      margin: 0 auto; /*
+This will center the element horizontally */
+      margin-top: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+  </style>
   <body>
     <div class="p-8 bg-warning text-dark">
       <nav class="navbar navbar-expand-lg">
@@ -58,7 +108,6 @@
         </div>
       </nav>
     </div>
-    <div class="main"></div>
 
     <div
       class="bg-warning-subtle text-warning-emphasis m-0 p-0"
@@ -66,8 +115,82 @@
     >
       <h2 class="border-2 border-success p-2 text-center">Feeding</h2>
       <div class="feeding-time"></div>
+      <div id="main-container">
+        <img
+          src="../images/nursing.png"
+          alt="nursing"
+          width="50px"
+          height="50px"
+        />
+
+        <form id="nursing">
+          <div id="feeding-navbar">
+            <label for="nursing-time">Nursing Time</label>
+            <input type="time" id="nursing-time" />
+          </div>
+          <hr />
+          <div id="left-right">
+            <div>
+              <h6>Left</h6>
+              <p id="timerLeft">0 seconds</p>
+            </div>
+            <div>
+              <h6>Right</h6>
+              <p id="timerRight">0 seconds</p>
+            </div>
+          </div>
+          <hr />
+          <div id="left-right">
+            <div>
+              <h6>Start Nursing Left</h6>
+              <button id="startLeft" type="button">
+                L
+                <img
+                  src="../images/play.png"
+                  width="40px"
+                  height="40px"
+                  alt="play1"
+                />
+              </button>
+            </div>
+
+            <div>
+              <h6>Start Nursing Right</h6>
+
+              <button id="startRight" type="button">
+                R
+                <img
+                  src="../images/play.png"
+                  width="40px"
+                  height="40px"
+                  alt="play1"
+                />
+              </button>
+            </div>
+
+            <div>
+              <h6>Pause</h6>
+
+              <button type="button" id="stop">
+                <img
+                  src="../images/pause.png"
+                  width="40px"
+                  height="40px"
+                  alt="play1"
+                />
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <button type="button" id="cancel">Cancel</button>
+            <button type="button" id="submit">Submit</button>
+            <hr />
+          </div>
+        </form>
+      </div>
     </div>
 
-    <script src="feeding.js"></script>
+    <script src="/js/feeding.js"></script>
   </body>
 </html>
