@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+nav {
+    background-color: #ffc107;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+a {
+    color:#2b1f10;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: #fff3cd;
+}
+
+.nobulletpoints {
+    list-style-type: none;
+}
+
+.nobulletpoints li {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+header {
+    background-color: #fff3cd;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #644824;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+     font-weight: 700;
+    font-style: normal;
+}
+
+
+p {
+    width: 100%;
+   margin-bottom: 30px;
+   text-align: center;
+   color: #644824;
+   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.stopwatch-circle {
+    background-color:#ffc107;
+    border: 3px dashed #fbefc9;
+    padding: 50px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#timer-display {
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff3cd;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+#timer-button {
+    border: none;
+    background-color: transparent;
+    font-size: 60px;
+    color:#fff3cd;
+}
+
+.stopwatch-circle:hover {
+    #timer-button {
+        color:#ffc107;
+    }}
+
+.stopwatch-circle:hover {
+    #timer-display {
+        color: #ffc107;
+       
+    }}
+
+.stopwatch-circle:hover {
+        background-color: #fff3cd;
+        border: 3px dashed #ffc107;
+    }
+
+
+
+.reset-save-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.reset-save-container button {
+    border: none;
+    background-color: #ffc107;
+    color: #fff3cd;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.reset-save-container button:hover {
+    background-color: #fff3cd;
+    color: #ffc107;
+}
