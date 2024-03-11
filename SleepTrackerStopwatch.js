@@ -29,22 +29,43 @@ function incrementTime() {
   timerDisplay.innerText = formatTime(numberOfSeconds);
 }
 
-function toggleTimer() {
+function play() {
   const timerButton = document.getElementById("timer-button");
+
+  isRunning = true;
+  timerButton.innerText = "▐ ▌";
+  timerButton.style = "font-size: 35px;";
+
+  intervalId = setInterval(incrementTime, 1000);
+}
+
+function pause() {
+  const timerButton = document.getElementById("timer-button");
+
+  isRunning = false;
+  timerButton.innerText = "▶";
+  timerButton.style = "";
+
+  clearInterval(intervalId);
+}
+
+function toggleTimer() {
 
   if (isRunning) {
     // pause pressed
-    isRunning = false;
-    timerButton.innerText = "▶";
-    timerButton.style = "";
-
-    clearInterval(intervalId);
+    pause()
   } else {
     // play pressed
-    isRunning = true;
-    timerButton.innerText = "▐ ▌";
-    timerButton.style = "font-size: 35px;";
-
-    intervalId = setInterval(incrementTime, 1000);
+    play()
   }
 }
+
+
+function resetTimer() {
+  const timerDisplay = document.getElementById("timer-display");
+  pause()
+  numberOfSeconds = 0
+  timerDisplay.innerText = "00 : 00 : 00";
+}
+
+
