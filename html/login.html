@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>calender</title>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -30,8 +29,8 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/login.html"
-              ><strong>MiniMilestones </strong>
-            </a>
+              ><strong>MiniMilestones </strong></a
+            >
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -50,7 +49,7 @@
                     class="nav-link active"
                     href="../fullcalendar-master/fullcalendar.html"
                     aria-disabled="true"
-                    >Calender</a
+                    >Calendar</a
                   >
                 </li>
               </ul>
@@ -71,22 +70,19 @@
       </div>
     </div>
 
-    <div class="bg-warning-subtle text-warning-emphasis">
+    <div class="bg-warning-subtle text-warning-emphasis" style="height: 100vh">
       <div id="wrap">
         <h1 id="welcomeMessage"></h1>
-        <a href="childProfile.html">
-          <button type="submit" id="addChild" class="btn btn-success">
-            Add child
-          </button>
-          <a href="dashboard.html">Dashboard</a>
-        </a>
+        <a href="childProfile.html" class="btn btn-success">Add child</a>
+        <a href="dashboard.html" class="btn btn-success">Go to dashboard</a>
       </div>
     </div>
+
     <script>
       const urlParams = new URLSearchParams(window.location.search)
       const name = urlParams.get('name')
-
       const welcomeMessageElement = document.getElementById('welcomeMessage')
+
       if (welcomeMessageElement) {
         welcomeMessageElement.innerText = `Welcome to MiniMilestones ${name}!`
       } else {

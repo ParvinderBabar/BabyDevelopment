@@ -12,7 +12,8 @@ form.addEventListener("submit", (e) => {
         alert("Please enter a valid name containing only letters and up to 20 characters.");
         return; // Exit the function early if validation fails
     }
-
+// Store user's name in localStorage
+            localStorage.setItem('userName', inputName);
     // Construct the URL with the name parameter
     var loginUrl = "login.html?name=" + encodeURIComponent(inputName.value);
 
