@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- corrected link tag -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    #startLeft {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only once */
+    }
+    #startRight {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only
+once */
+    }
+    #stop {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      border-radius: 50px; /* Define border-radius only once */
+    }
+    #left-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    #timerLeft {
+      color: darkgreen;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #result,
+    #timerRight {
+      color: darkgreen;
+      font-size: xx-large;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #main-container {
+      width: auto;
+      height: auto;
+      margin: 0 auto; /*
+This will center the element horizontally */
+      margin-top: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div class="p-8 bg-warning text-dark">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">MiniMilestones</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Baby Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">First Year</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true">Toddler</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="bg-warning-subtle text-warning-emphasis m-0 p-0"
+      style="height: 100vh"
+    >
+      <h2 class="border-2 border-success p-2 text-center">Baby Products</h2>
+
+      <div id="main-container">
+        <img src="../images/6.jpg" alt="nursing" width="50px" height="50px" />
+
+        <div>
+          <div id="products-container" class="products-container">
+            <!-- Products will be dynamically added here -->
+          </div>
+
+          <a href="../index.html" class="btn btn-success">Go to Homepage</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const products = [
+        {
+          id: 1,
+          name: 'Baby Formula',
+          description: 'Nutritious formula for infants',
+          category: 'Feeding',
+          price: 19.99,
+          image: 'https://example.com/formula.jpg'
+        },
+
+        {
+          id: 2,
+          name: 'Diapers',
+          description: 'Soft and absorbent diapers for babies',
+          category: 'Diapering',
+          price: 29.99,
+          image: 'https://example.com/diapers.jpg'
+        },
+        {
+          id: 3,
+          name: 'Baby Monitor',
+          description: 'Monitor to keep an eye on your baby',
+          category: 'Safety',
+          price: 99.99,
+          image: 'https://example.com/monitor.jpg'
+        },
+        {
+          id: 4,
+          name: 'Baby Carrier',
+          description: 'Convenient carrier for carrying yourbaby',
+          category: 'Travel',
+          price: 49.99,
+          image: '..BabyDevelopment/images/babycarier.jpg' // Relative path
+        }
+      ]
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the containewhere products will be displayed
+        const productsContainer = document.getElementById('products-container')
+        // Iterate over each product inthe products array
+
+        products.forEach(product => {
+          // Create HTML elements todisplay the product
+          const productElement = document.createElement('div')
+          productElement.classList.add('product') // Add product details to the HTML
+          productElement.innerHTML = `
+<h3>${product.name}</h3>
+<p>${product.description}</p>
+<p>Price: $${product.price}</p>
+` // Append the product element to the products container
+          productsContainer.appendChild(productElement)
+        })
+      })
+    </script>
+  </body>
+</html>
