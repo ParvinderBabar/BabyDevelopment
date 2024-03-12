@@ -7,9 +7,8 @@ nav {
     background-color: #ffc107;
     padding: 25px;
     display: flex;
-    justify-content: center;
+    width: 100%
 }
-
 
 a {
     color:#2b1f10;
@@ -31,6 +30,13 @@ body {
 .nobulletpoints li {
     list-style-type: none;
     display: inline-flex;
+    padding-right: 20px;
+}
+
+
+.mid-nav {
+    text-align: center;
+    padding-left: 15%;
 }
 
 header {
