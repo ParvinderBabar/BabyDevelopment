@@ -114,78 +114,46 @@ This will center the element horizontally */
       class="bg-warning-subtle text-warning-emphasis m-0 p-0"
       style="height: 100vh"
     >
-      <h2 class="border-2 border-success p-2 text-center">Feeding</h2>
-      <div class="feeding-time"></div>
+      <h2 class="border-2 border-success p-2 text-center">
+        Diaper Tracking time
+      </h2>
+
       <div id="main-container">
         <img
-          src="../images/nursing.png"
-          alt="nursing"
+          src="../images/diaper.png"
+          alt="diaper"
           width="50px"
           height="50px"
         />
 
-        <form id="nursing">
-          <div id="feeding-navbar">
-            <label for="nursing-time">Nursing Time</label>
+        <form id="diaper-change">
+          <div id="diaper-navbar">
+            <label for="nursing-time">Diaper Change Time</label>
 
-            <input type="time" id="nursing-time" />
+            <input type="time" id="diaper-time" />
           </div>
           <hr />
-          <div id="left-right">
-            <div>
-              <h6>Left</h6>
-              <p id="timerLeft">0 seconds</p>
-            </div>
-            <div>
-              <h6>Right</h6>
-              <p id="timerRight">0 seconds</p>
-            </div>
+
+          <!-- <p id="result"></p> -->
+          <div id="types-diaper">
+            <input type="radio" id="wet1" name="diaper-type" value="wet1" />
+            <label for="wet1">Wet Diaper 1</label><br />
+
+            <input type="radio" id="wet2" name="diaper-type" value="wet2" />
+            <label for="wet2">Wet Diaper 2</label><br />
+
+            <!-- Add more wet diaper options here -->
+
+            <input type="radio" id="dry1" name="diaper-type" value="dry1" />
+            <label for="dry1">Dry Diaper 1</label><br />
+
+            <!-- Add more dry diaper options here -->
+
+            <!-- Add more diaper types here -->
           </div>
-          <p id="result"></p>
 
           <hr />
-          <div id="left-right">
-            <div>
-              <h6>Start Nursing Left</h6>
-              <button id="startLeft" type="button">
-                L
-                <img
-                  src="../images/play.png"
-                  width="40px"
-                  height="40px"
-                  alt="play1"
-                />
-              </button>
-            </div>
 
-            <div>
-              <h6>Start Nursing Right</h6>
-
-              <button id="startRight" type="button">
-                R
-                <img
-                  src="../images/play.png"
-                  width="40px"
-                  height="40px"
-                  alt="play1"
-                />
-              </button>
-            </div>
-
-            <div>
-              <h6>Pause</h6>
-
-              <button type="button" id="stop">
-                <img
-                  src="../images/pause.png"
-                  width="40px"
-                  height="40px"
-                  alt="play1"
-                />
-              </button>
-            </div>
-          </div>
-          <hr />
           <div>
             <button type="button" id="cancel">Cancel</button>
             <button type="button" id="submit">Submit</button>

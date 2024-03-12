@@ -21,17 +21,32 @@
 
       .card {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
         width: auto;
         height: 150px;
+        padding: 50px;
+
         background-color: pink;
       }
-      .icons {
-        display: flex;
-
-        justify-content: center;
+      .card img {
         width: 40px;
         height: 40px;
-        margin: 20px;
+        display: flex;
+        align-items: center;
+        /* Adjust margin as needed */
+      }
+      .card p {
+        padding-left: 30px;
+        font-size: xx-large;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10;
+        text-decoration: none;
+      }
+      .card #dashboard-result {
+        text-decoration: none; /* Remove underline from the
+text */
       }
     </style>
   </head>
@@ -100,13 +115,14 @@
         <a href="/html/feedingTracker.html">
           <div class="card">
             <img class="icons" src="../images/bottle.png" alt="feeding" />
+            <p id="dashboard-result"></p>
           </div>
         </a>
         <hr />
 
-        <a href="/html/feedingTracker.html">
+        <a href="/html/diaperChange.html">
           <div class="card">
-            <img class="icons" src="../images/diaper.png" alt="sleep" />
+            <img class="icons" src="../images/diaper.png" alt="diaper-type" />
           </div>
         </a>
         <hr />
